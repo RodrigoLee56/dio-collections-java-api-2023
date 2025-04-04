@@ -15,23 +15,27 @@ public class OrdenacaoPessoas {
         this.pessoaList.add(new Pessoa(nome, idade, altura));
     }
 
-    public List<Pessoa> ordenarPorIdade(){
+    public List<Pessoa> ordenarPorIdade() {
         List<Pessoa> pessoasPorIdade = new ArrayList<>(pessoaList);
-        if (!pessoaList.isEmpty()){
+        if (!pessoaList.isEmpty()) {
             Collections.sort(pessoasPorIdade);
             return pessoasPorIdade;
-        }else{
+        } else {
             throw new RuntimeException("A lista está vazia!");
         }
     }
 
-    public List<Pessoa> ordenarPorAltura(){
+    public List<Pessoa> ordenarPorAltura() {
         List<Pessoa> pessoaPorAltura = new ArrayList<>(pessoaList);
-        if (!pessoaList.isEmpty()){
+        if (!pessoaList.isEmpty()) {
             Collections.sort(pessoaPorAltura, new ComparatorPorAltura().reversed());
             return pessoaPorAltura;
-        }else {
+        } else {
             throw new RuntimeException("A lista está vazia!");
         }
+    }
+
+    public List<Pessoa> getPessoaList() {
+        return pessoaList;
     }
 }

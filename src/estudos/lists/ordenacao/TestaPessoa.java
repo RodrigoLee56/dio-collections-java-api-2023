@@ -11,6 +11,10 @@ public class TestaPessoa {
         ordenacaoPessoas.adicionarPessoa("Charlie", 25, 1.70);
         ordenacaoPessoas.adicionarPessoa("David", 17, 1.56);
 
+        System.out.println("Lista: " + ordenacaoPessoas.getPessoaList());
+
         System.out.println(ordenacaoPessoas.ordenarPorIdade());
+
+        System.out.println(ordenacaoPessoas.ordenarPorAltura());
     }
 }
