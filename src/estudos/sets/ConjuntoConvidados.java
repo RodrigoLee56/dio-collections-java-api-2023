@@ -13,4 +13,23 @@ public class ConjuntoConvidados {
     public void adicionarConvidado(String nome, int codigoConvite) {
         convidados.add(new Convidado(codigoConvite, nome));
     }
+
+    public void removerConvidadoPorCodigoConvite(int codigoConvite) {
+        Convidado convidadoParaRemover = null;
+        if (!convidados.isEmpty()) {
+            for (Convidado convidado : convidados) {
+                if (convidado.getCodigoConvite() == codigoConvite) {
+                    convidadoParaRemover = convidado;
+                    break;
+                }
+            }
+            convidados.remove(convidadoParaRemover);
+        } else {
+            throw new RuntimeException("O conjunto está vazio!");
+        }
+    }
+
+    public Set<Convidado> getConvidados() {
+        return convidados;
+    }
 }
