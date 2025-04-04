@@ -24,4 +24,14 @@ public class OrdenacaoPessoas {
             throw new RuntimeException("A lista está vazia!");
         }
     }
+
+    public List<Pessoa> ordenarPorAltura(){
+        List<Pessoa> pessoaPorAltura = new ArrayList<>(pessoaList);
+        if (!pessoaList.isEmpty()){
+            Collections.sort(pessoaPorAltura, new ComparatorPorAltura().reversed());
+            return pessoaPorAltura;
+        }else {
+            throw new RuntimeException("A lista está vazia!");
+        }
+    }
 }
