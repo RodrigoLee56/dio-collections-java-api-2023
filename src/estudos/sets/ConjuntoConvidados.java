@@ -32,4 +32,16 @@ public class ConjuntoConvidados {
     public Set<Convidado> getConvidados() {
         return convidados;
     }
+
+    public int contarConvidados() {
+        return convidados.size();
+    }
+
+    public void exibirConvidados() {
+        if (!convidados.isEmpty()) {
+            System.out.println(getConvidados());
+        } else {
+            System.out.println("O conjunto está vazio!");
+        }
+    }
 }
