@@ -1,4 +1,4 @@
-package src.estudos.sets;
+package src.estudos.sets.operacoes_basicas.convite;
 
 public class ConvidadoTeste {
     public static void main(String[] args) {

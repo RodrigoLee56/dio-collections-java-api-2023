@@ -1,4 +1,4 @@
-package src.estudos.sets;
+package src.estudos.sets.operacoes_basicas.convite;
 
 import java.util.HashSet;
 import java.util.Set;
